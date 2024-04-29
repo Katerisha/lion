@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <title>{{ title }}</title>
+  {# <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png"> #}
+  <link rel="icon" sizes="120x120" href="./images/favicon/favicon.png">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="./images/favicon/favicon-32x32.ico"/>
+  {# <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png"/> #}
+  <link rel="preload" href="/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="stylesheet" type="text/css" href="./css/lib.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+{# <noscript>
+  <div class="noscript">
+    <strong>
+      Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+      <a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>
+      как включить JavaScript в вашем браузере.
+    </strong>
+  </div>
+</noscript> #}
+<!--if lte IE 8
+p.off-js
+  | Ваш браузер устарел, пожалуйста
+  b обновите
+  |  его.
+-->
+{% block content %}
+{% endblock %}
+
+<script src="js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNAljGFFDKq6W69dSVoW52nEhHtQ8nV78"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

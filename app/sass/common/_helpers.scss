@@ -1,0 +1,53 @@
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.btn--full-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.text-clip {
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  text-overflow: ellipsis;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.bg--properties {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flex-wrap {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.disable {
+  pointer-events: none !important;
+}
+
+.hand {
+  cursor: pointer !important;
+}

@@ -1,0 +1,60 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a href="#" class="footer__logo">
+            <img src="images/footer-logo.svg" alt="#">
+        </a>
+        <div class="footer__title">Офіційний імпортер Monolit</div>
+        <div class="footer__contacts">
+          <div class="contact__info">
+            <div class="contact__name">Вебсайт</div>
+            <div class="contact__address">
+              <a href="https://mnlt.com/" class="contact__email">www.mnlt.com</a>
+            </div>
+          </div>
+          <div class="contact__info">
+            <div class="contact__name">Телеграм</div>
+            <div class="contact__address">
+              <a href="https://telegram.me/monolit" class="contact__email">t.me/monolit</a>
+            </div>
+          </div>
+          <div class="contact__info">
+            <div class="contact__name">Email</div>
+            <div class="contact__address">
+              <a href="mailto:info@mnlt.com" class="contact__email">info@mnlt.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div id="feedback__form" class="feedback__form">
+          <form action="/" class="reset__mode js_validate" method="POST">
+            <div class="form__title">Зв'язатися з нами</div>
+            <div class="feedback__wrap">
+                <div class="input__box">
+                    <input type="text" id="username" name="username" autocomplete="off" value="" required="" data-validate="text" data-error-empty="Поле не заполнено" data-error-min="Не менее 6 символов" class="text__input">
+                    <label for="username" class="control__label">Прізвище та ім’я</label>                
+                </div>
+                <div class="input__box">
+                    <input type="email" id="email" name="email" autocomplete="off" value="" required="" data-validate="email" data-error-wrong="Поле «Email» заполнено неверно" data-error-empty="Поле «Email» не заполнено" data-error-min="Email: не менее 6 символов" class="text__input" >
+                    <label for="email" class="control__label">Email</label>                
+                </div>
+                <div class="input__box">
+                    <input type="tel" id="phone" name="phone" autocomplete="off" value="" data-validate="phone" placeholder="+38 (999) 999-99-99" class="text__input">
+                    <label for="telephone" class="control__label">Телефон</label>                
+                </div>
+                <div class="input__box">
+                    <input type="text" id="comment" name="comment" autocomplete="off" value="" required="" data-validate="text" data-error-empty="Поле не заполнено" class="text__input">
+                    <label for="comment" class="control__label">Коментар</label>                
+                </div>
+                <div class="button">
+                    <button type="submit">Отримати консультацію</button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

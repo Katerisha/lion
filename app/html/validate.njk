@@ -1,0 +1,112 @@
+{% set title = 'Главная' %}
+{% extends 'layouts/layout.njk' %}
+{% block content %}
+  <div class="wrapper">
+    {% include 'components/header.njk' %}
+    <main class="main">
+      <div class="container">
+
+        <form class="contacts-form js_validate" name="modal-contacts">
+          <div class="h4-title">Оставьте заявку</div>
+          <label class="main-label" for="name">Имя*</label>
+          <div class="input-container">
+            <input class="form-control" id="name" type="text" name="name" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="колл-во символов(2-30)" data-minsign="2" data-maxsign="30" required="" />
+          </div>
+          <label class="main-label" for="secondName">Фамилия*</label>
+          <div class="input-container">
+            <input class="form-control" id="secondName" type="text" name="second-name" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="колл-во символов(2-30)" data-minsign="2" data-maxsign="30" required="" />
+          </div>
+          <label class="main-label" for="login">Login*</label>
+          <div class="input-container">
+            <input class="form-control" id="login" type="text" name="login" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="колл-во символов(2-30)" data-minsign="2" data-maxsign="30" required="" />
+          </div>
+          <label class="main-label" for="phone">Телефон*</label>
+          <div class="input-container">
+            <input class="form-control" id="phone" type="tel" name="phone" data-validate="phone" data-error-empty="Заполните поле" maxlength="19" data-error-wrong="Поле «Телефон» заполнено не верно" required="" />
+          </div>
+          <label class="main-label" for="email">Email*</label>
+          <div class="input-container">
+            <input class="form-control" id="email" type="email" name="email" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" data-error-max="Email: не более 37 символов" data-error-min="Email: не менее 6 символов" required="" />
+          </div>
+          <label class="main-label" for="country">Страна*</label>
+          <div class="input-container">
+            <input class="form-control" id="country" type="text" name="country" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="колл-во символов(2-30)" data-minsign="2" data-maxsign="30" required="" />
+          </div>
+          <div class="input-container">
+            <label class="main-label" for="orderStreet">Улица*</label>
+            <input class="form-control" id="street" type="text" name="street" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="колл-во символов(2-30)" data-minsign="2" data-maxsign="30" required="" />
+          </div>
+          <div class="input-container">
+            <label class="main-label" for="orderHouse">Дом*</label>
+            <input class="form-control js_number" id="house" type="text" name="house" data-validate="house" data-error-wrong="кол-во символов(1-5)" data-error-empty="кол-во символов(1-5)" data-minsign="1" data-maxsign="5" required="" />
+          </div>
+          <div class="input-container">
+            <label class="main-label" for="orderHouse">Квартира*</label>
+            <input class="form-control js_number" id="flat" type="number" name="flat" data-validate="number" data-error-wrong="кол-во символов(1-5)" data-error-empty="кол-во символов(1-5)" data-minsign="1" data-maxsign="5" required="" />
+          </div>
+          <div class="input-container js_valid-select">
+            <select name="country" required="">
+              <option disabled="true" selected="true">Страна проживания</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="UK">UK</option>
+            </select>
+          </div>
+          <div class="input-container input-container-file" data-error="Файл не выбран. Загрузите файл">
+            <div class="input-container-file__inner">
+              <div class="icon icon-clip"></div>
+              <label class="input-container-file__label">
+                <span class="input-container-file__text">Прикрепить резюме</span>
+                <input accept="application/pdf,text/plain,application/msword,application/rtf,application/x-rtf,text/richtext,application/rtf,text/richtext,application/vnd.oasis.opendocument.text" type="file" name="files1" data-validate="file" data-error-type="Неверный тип файла" data-error-size="Недопустимый размер файла" data-error-existence="Файл не выбран. Загрузите файл" required="required" class="input-container-file__files">
+              </label>
+            </div>
+            <button class="input-container-file__delete js_delete-file" type="button"></button>
+            <div class="input-container-file__description">
+              <span>Размер файла не должен превышать 5 мб</span>
+              <span>Разрешены следующие форматы: .pdf, .txt, .doc, .docx, .rtf, .odt</span>
+            </div>
+          </div>
+          <div class="input-container input-rating">
+            <label for="rating">Рейтинг</label>
+            <div class="rating js_rating">
+              {% set stars = [{index: 0}, {index: 1}, {index: 2}, {index: 3}, {index: 4}] %}
+              {% for star in stars %}
+                <span class="rating__star" data-index='{{ star.index }}'></span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="input-container radio-container js_valid-radio">
+            <span class="h5-title">3. Способ оплаты</span>
+            <div class="radio">
+              <input id="cash" type="radio" name="payment" value="payment" />
+              <label for="cash">Наличными</label>
+            </div>
+            <div class="radio">
+              <input id="cart" type="radio" name="payment" value="cart" />
+              <label for="cart">Картой при получении</label>
+            </div>
+            <div class="radio">
+              <input id="cartSite" type="radio" name="payment" value="cart-site" />
+              <label for="cartSite">Картой на сайте</label>
+            </div>
+            <div class="radio">
+              <input id="payPart" type="radio" name="payment" value="pay-part" />
+              <label for="payPart">Оплата частями</label>
+            </div>
+          </div>
+          <label class="main-label" for="message">Сообщение</label>
+          <div class="input-container input-container--textarea">
+            <textarea class="form-control" id="message" name="message" maxlength="10000"></textarea>
+          </div>
+          <div class="input-container checkbox-container" data-error="Этот пункт обязателен">
+            <div class="checkbox">
+              <input class="js_checkbox-agree" id="agree" type="checkbox" value="agree" checked="" />
+              <label for="agree">Я согласен на обработку и защиту персональных данных</label>
+            </div>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+        </form>
+      </div>
+    </main>
+    {% include 'components/footer.njk' %}
+  </div>
+{% endblock %}

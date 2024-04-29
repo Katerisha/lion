@@ -1,0 +1,9 @@
+{
+  "productsImages": [
+    {"src": "./images/main/products-img1.png"},
+    {"src": "./images/main/products-img2.png"},
+    {"src": "./images/main/products-img1.png"},
+    {"src": "./images/main/products-img2.png"}
+  ]
+}
+
