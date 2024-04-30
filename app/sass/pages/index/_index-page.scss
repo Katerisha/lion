@@ -493,11 +493,11 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
 
 .exploitation__wrap {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
-    // @include r(1024) {
-    //   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    // }
+    @include r(1023) {
+      grid-template-columns: auto;
+    }
     @include r(768) {
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
@@ -508,6 +508,9 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 24px;
+  @include r(1023) {
+    margin-bottom: 0;
+  }
   @include r(768) {
     @include fsb;
     font-size: 28px;
@@ -528,7 +531,9 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
       background: $light-grey;
       color: $white;
     }
-  
+    @include r(1023) {
+      display: none;
+    }
     @include r(768) {
       font-size: 13px;
       padding: 16px;
@@ -536,19 +541,46 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
   }
 }
 
-.exploitation_btn {
+.exploitation__btn {
   display: flex;
 }
 
 .exploitation__right {
+  .contact__btn {
+    display: none;
+    @include r(1023) {
+      background: $white;
+    width: 100%;
+    color: $dark-grey;
+    text-align: center;
+    transition: all 0.3s;
+    max-width: 100%;
+    display: block;
+    &:hover {
+      background: $light-grey;
+      color: $white;
+    }
+  
+    @include r(768) {
+      font-size: 13px;
+      padding: 16px;
+    }
+    }
+    
+  }
+}
+
+.properties__content {
   display: grid;
   gap: 12px;
+  @include r(1024) {
+    gap: 8px;
+  margin-bottom: 40px;
+  }
 }
 
 .properties__info {
   display: flex;
-  // grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  // grid-template-columns: repeat(auto-fit, minmax(39px, 532px));
   gap: 8px;
   border-radius: 12px;
     background: #282828;
@@ -561,8 +593,6 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
     }
   }
 }
-
-
 
 .properties__text {
   font-size: 20px;
