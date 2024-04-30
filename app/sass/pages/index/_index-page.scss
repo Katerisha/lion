@@ -374,14 +374,6 @@
   }
 }
 
-.specifications__right {
-  // max-width: 715px;
-  // width: 59%;
-  // @include r(768) {
-  //   width: 100%;
-  // }
-}
-
 .specifications__item {
 // display: flex;
 border-radius: 8px;
@@ -395,16 +387,21 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
       padding: 8px 12px;
       grid-template-columns: minmax(0, 1fr) minmax(0, 81px);
     }
+
 &:nth-child(odd) {
   background: $grey;
 }
-.cards__text {
-  text-align: right;
-}
-  .meaning {
+  .name {
     color: $grey-txt;
     text-align: left;
   }
+  .meaning {     
+  @include fsb;
+    text-align: right;
+    @include r(768) {
+      @include fr;
+    }
+  }  
 }
 
 .specifications__list {
@@ -419,4 +416,45 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 12px;
+}
+
+.characteristics {
+  padding-top: 164px;
+  padding-bottom: 140px;
+}
+
+.characteristics__properties {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  @include r(600) {
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+  }
+}
+
+.characteristics__info {
+  border-radius: 16px;
+  background: $grey;
+  padding: 20px;
+  @include r(600) {
+    border-radius: 8px;
+    padding: 22px 12px;
+  }
+  .name {
+    color: $grey-txt;
+    margin-bottom: 4px;
+    @include r(768) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .meaning {     
+    @include fsb;
+    @include r(768) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
 }
