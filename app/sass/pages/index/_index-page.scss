@@ -428,10 +428,17 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
-  @include r(600) {
-  gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+  margin-bottom: 140px;
+  @include r(1366) {
+    margin-bottom: 100px;
   }
+  @include r(1099) {
+    margin-bottom: 60px;
+  }
+    @include r(600) {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+    }
 }
 
 .characteristics__info {
@@ -457,4 +464,9 @@ grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
       line-height: 16px;
     }
   }
+}
+
+.scharacteristics__img {
+  width: 100%;
+  height: auto;
 }
