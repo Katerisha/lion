@@ -6,7 +6,7 @@
   margin: 0 auto;
   @include r(1099) {
     padding-top: 60px;
-  padding-bottom: 48px;
+    padding-bottom: 48px;
   }
   a {
     transition: $animation-speed;
@@ -35,9 +35,8 @@
   @include r(1099) {
     grid-row-gap: 40px;
   }
-  @include r(992) {
+  @include r(991) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-row-gap: 40px;
   }
 }
 
@@ -58,11 +57,11 @@
   &:hover {
     opacity: 0.6;
   }
-  @include r(1099) {    
+  @include r(1099) {
     margin-bottom: 20px;
   }
   img {
-    @include r(768) {
+    @include r(767) {
       max-width: 237px;
     }
   }
@@ -77,7 +76,7 @@
   @include r(1099) {
     margin-bottom: 20px;
   }
-  @include r(768) {
+  @include r(767) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -99,16 +98,15 @@
   max-width: 190px;
   // margin-right: 20px;
   border-radius: 10px;
-    background: rgba(33, 33, 33, .2);
-    padding: 20px;
-    width: 100%;
-    @include r(1024) {
-      padding: 20px 12px;
-    }
-    @include r(768) {
-      max-width: 154px;
-      
-    }
+  background: rgba(33, 33, 33, 0.2);
+  padding: 20px;
+  width: 100%;
+  @include r(1024) {
+    padding: 20px 12px;
+  }
+  @include r(767) {
+    max-width: 154px;
+  }
 }
 
 .contact__name {
@@ -116,11 +114,11 @@
   line-height: 14px;
   margin-bottom: 24px;
   width: 100%;
-  @include r(768) {
+  @include r(767) {
     font-size: 12px;
     line-height: 12px;
     margin-bottom: 12px;
-    }
+  }
 }
 
 .footer__contacts .contact__address {
@@ -133,9 +131,9 @@
   font-size: 16px;
   line-height: 16px;
   color: $white;
-  @include r(768) {
-  font-size: 14px;
-  line-height: 14px;
+  @include r(767) {
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 
@@ -186,11 +184,11 @@
   font-size: 32px;
   line-height: 42px;
   margin-bottom: 30px;
-  @include r(768) {
+  @include r(767) {
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 20px;
-    }
+  }
 
   // margin-bottom: 50px;
   // max-width: 360px;
@@ -212,13 +210,13 @@
     right: 0;
     font-size: 10px;
     line-height: 16px;
-    color: #AD1D41;
-    font-family: 'Montserrat-Regular', sans-serif;
+    color: #ad1d41;
+    font-family: "Montserrat-Regular", sans-serif;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -226,10 +224,8 @@
   &:before {
     opacity: 1;
     visibility: visible;
+  }
 }
-}
-
-
 
 .control__label {
   position: absolute;
@@ -304,8 +300,8 @@
     background: $light-grey;
     color: $white;
   }
-  @include r(768) {
+  @include r(767) {
     font-size: 13px;
     padding: 16px;
-    }
+  }
 }
