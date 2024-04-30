@@ -9,6 +9,12 @@ html {
 .icon-arrow {
   @extend %icon-arrow;
 }
+.icon-checkmark {
+  @extend %icon-checkmark;
+}
+.icon-check-bold {
+  @extend %icon-check-bold;
+}
 
 body {
   @include fr;
