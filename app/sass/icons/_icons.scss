@@ -7,11 +7,13 @@ $icon_font_name:"Icons";
   url('../fonts/Icons.ttf') format('truetype'),
   url('../fonts/Icons.svg#Icons') format('svg');
 }
+%icon-arrow-up,
 %icon-arrow,
 %icon-bookmark,
 %icon-check-bold,
 %icon-checkmark,
 %icon-heart,
+%icon-quote,
 %last_selector {
          &:before {
            font-family:$icon_font_name;
@@ -53,18 +55,24 @@ $icon_font_name:"Icons";
   }
 }
 
-%icon-arrow:before {
+%icon-arrow-up:before {
   content:'\E001';
 }
-%icon-bookmark:before {
+%icon-arrow:before {
   content:'\E002';
 }
-%icon-check-bold:before {
+%icon-bookmark:before {
   content:'\E003';
 }
-%icon-checkmark:before {
+%icon-check-bold:before {
   content:'\E004';
 }
-%icon-heart:before {
+%icon-checkmark:before {
   content:'\E005';
+}
+%icon-heart:before {
+  content:'\E006';
+}
+%icon-quote:before {
+  content:'\E007';
 }

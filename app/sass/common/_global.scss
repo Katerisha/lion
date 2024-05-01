@@ -15,6 +15,12 @@ html {
 .icon-check-bold {
   @extend %icon-check-bold;
 }
+.icon-quote {
+  @extend %icon-quote;
+}
+.icon-arrow-up {
+  @extend %icon-arrow-up;
+}
 
 body {
   @include fr;
@@ -235,6 +241,7 @@ h6,
   overflow: hidden;
   position: relative;
   padding-top: 82px;
+  // height: 8500px;
   @include r(1199) {
     padding-top: 70px;
   }

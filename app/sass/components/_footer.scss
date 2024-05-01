@@ -126,11 +126,14 @@
   width: 100%;
 }
 
-.footer__contacts .contact__email {
+.contact__email {
   @include fsb;
   font-size: 16px;
   line-height: 16px;
   color: $white;
+  &:hover {
+    color: $grey-txt;
+  }
   @include r(767) {
     font-size: 14px;
     line-height: 14px;
@@ -210,8 +213,7 @@
     right: 0;
     font-size: 10px;
     line-height: 16px;
-    color: #ad1d41;
-    font-family: "Montserrat-Regular", sans-serif;
+    color: $white;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s ease;

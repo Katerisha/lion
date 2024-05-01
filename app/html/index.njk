@@ -3,7 +3,7 @@
 {% block content %}
     <div class="wrapper">
         {% include 'components/header.njk' %}
-        <main class="main">     
+        <main class="main">
             {# <section class="banner">
                 <div class="container">
                     
@@ -26,25 +26,62 @@
             <section class="banner">
                 <div class="container">
                     <div class="banner__top">
-                        {# <img src="images/dron1.png" alt="#" width="620" height="523"> #}
                         <div class="banner__main">
                             <div class="banner__name">Безпілотний літальний апарат</div>
                             <div class="banner__title">Lion7 v2</div>
                             <div class="banner__text">Офіційний імпортер Monolit</div>
                         </div>
                     </div>
+                    
                     <div class="banner__bottom grids">
-                        <div class="content__text">Розроблений з урахуванням <span>рекомендацій військових </span>для максимальної надійності та ефективності.</div>
-                        {# <div class="span2"></div> #}
+                        <div class="arrow__down">
+                        <i class="icon icon-arrow-up"></i>
+                        <div class="arrow__text">Скрол вниз</div>
+                    </div>
+                        <div class="content__wrap">
+                            <div class="content__text">Розроблений з урахуванням <span>рекомендацій військових </span>для максимальної надійності та ефективності.</div>
                         <div class="content__text">Універсальне рішення для <span>виконання бойових завдань</span></div>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section class="cards">
+                <div class="cards__wrap" id="horizontal">
+                                    <div class="cards__item span2">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
+                                    </div>
+                                    <div class="cards__item span2">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Потужний відеопередавач VTX з частотою 5.8G та чіпом потожністью 2.5W він забезпечує стабільний зв'язок на відстань 10 км без втрат сигналу.</div>
+                                    </div>
+                                    <div class="cards__item span2">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Дрон оснащений потужними двигунами 2812 1150KV, що дозволяють піднімати вантаж до 3 кг. </div>
+                                    </div>
+                                    <div class="cards__item">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
+                                    </div>
+                                    <div class="cards__item">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
+                                    </div>
+                                    <div class="cards__item">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
+                                    </div>
+                                    <div class="cards__item">
+                                        <img src="images/cards/card1.png" alt="card" class="cards__img">
+                                        <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
+                                    </div>
+                                </div>
             </section>
             <section class="cards__slider" id="cards__slider">
                 <div class="container">
                     <div class="main__title">
                             Ось що його вирізняє
-                    </div>  
+                    </div>
                     <div class="slider">
                         <div class="mySwiper swiper">
                             <div class="swiper-wrapper">
@@ -53,32 +90,32 @@
                                         <img src="images/cards/card1.png" alt="card" class="cards__img">
                                         <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
                                     </div>
-                               </div>
-                               <div class="swiper-slide">
+                                </div>
+                                <div class="swiper-slide">
                                     <div class="cards__item">
                                         <img src="images/cards/card1.png" alt="card" class="cards__img">
                                         <div class="cards__text">Потужний відеопередавач VTX з частотою 5.8G та чіпом потожністью 2.5W він забезпечує стабільний зв'язок на відстань 10 км без втрат сигналу.</div>
                                     </div>
-                               </div>
-                               <div class="swiper-slide">
+                                </div>
+                                <div class="swiper-slide">
                                     <div class="cards__item">
                                         <img src="images/cards/card1.png" alt="card" class="cards__img">
                                         <div class="cards__text">Дрон оснащений потужними двигунами 2812 1150KV, що дозволяють піднімати вантаж до 3 кг. </div>
                                     </div>
-                               </div>
-                               <div class="swiper-slide">
+                                </div>
+                                <div class="swiper-slide">
                                     <div class="cards__item">
                                         <img src="images/cards/card1.png" alt="card" class="cards__img">
                                         <div class="cards__text">Корисне навантаження в Lion7 - 1.5 кг і цей FPV легко впорається з його доставкою на відстань до 10 км швидкістю зі швидкість понад 100 км/год і будьте певними що він досягне цілі.</div>
                                     </div>
-                               </div>
-                               <div class="swiper-slide">
+                                </div>
+                                <div class="swiper-slide">
                                     <div class="cards__item">
                                         <img src="images/cards/card1.png" alt="card" class="cards__img">
                                         <div class="cards__text">Вдосконалена камера Caddx Twilight Camera 1200TVL, яка забезпечує високу якість зображення навіть в умовах слабкого освітлення. Це неодноразово протестоване та підтверджено хлопцями.</div>
                                     </div>
-                               </div>
-                                                            
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -86,7 +123,7 @@
             </section>
             <section class="specifications" id="specifications">
                 <div class="container">
-                    <div class="main__title">Специфікації</div>  
+                    <div class="main__title">Специфікації</div>
                     <div class="specifications__wrap">
                         <div class="specifications__left">
                             <img src="images/dron1.png" alt="card" class="specifications__img" width="255" height="215">
@@ -170,7 +207,7 @@
                                 <li class="specifications__item">
                                     <span class="cards__text name">Тип аккумулятора</span>
                                     <span class="cards__text meaning">6s2p</span>
-                                </li>                                
+                                </li>
                             </ul>
                             <div class="specifications__title">Діапозон робочих частот:</div>
                             <ul class="specifications__list">
@@ -195,14 +232,14 @@
                                     <span class="cards__text meaning">25 км.</span>
                                 </li>
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>
             </section>
             <section class="characteristics" id="characteristics">
                 <div class="container">
-                    <div class="main__title">Характеристики</div> 
+                    <div class="main__title">Характеристики</div>
                     <div class="characteristics__properties">
                         <div class="characteristics__info">
                             <div class="cards__text name">Рама:</div>
@@ -246,13 +283,13 @@
                         </div>
                     </div>
                     <img src="images/dron.png" alt="dron" class="characteristics__img" width="1240" height="600">
-                </div>                
+                </div>
             </section>
             <section class="exploitation">
                 <div class="container">
                     <div class="exploitation__wrap">
                         <div class="exploitation__left">
-                            <div class="exploitation__title">Умови використання та експлуатації (застосування) за для збереження показників:</div> 
+                            <div class="exploitation__title">Умови використання та експлуатації (застосування) за для збереження показників:</div>
                             <div class="exploitation__btn">
                                 <a href="#feedback__form" class="contact__btn">Отримати консультацію</a>
                             </div>
@@ -260,21 +297,21 @@
                         <div class="exploitation__right">
                             <div class="properties__content">
                                 <div class="properties__info">
-                                <i class="icon icon-check-bold"></i>
-                                <div class="properties__text">Акумулятор 6S2P Molicel INR-21700 P42A 8400mAh</div>
-                            </div>
-                            <div class="properties__info">
-                                <i class="icon icon-check-bold"></i>
-                                <div class="properties__text">Температурний діапазон застосовується від мінус 10 °С до плюс 30 °С.</div>
-                            </div>
-                            <div class="properties__info">
-                                <i class="icon icon-check-bold"></i>
-                                <div class="properties__text">Швидкість вітру не більше ніж 15 м/с</div>
-                            </div>
-                            <div class="properties__info">
-                                <i class="icon icon-check-bold"></i>
-                                <div class="properties__text">Вологість повітря не більше ніж 70%</div>
-                            </div>
+                                    <i class="icon icon-check-bold"></i>
+                                    <div class="properties__text">Акумулятор 6S2P Molicel INR-21700 P42A 8400mAh</div>
+                                </div>
+                                <div class="properties__info">
+                                    <i class="icon icon-check-bold"></i>
+                                    <div class="properties__text">Температурний діапазон застосовується від мінус 10 °С до плюс 30 °С.</div>
+                                </div>
+                                <div class="properties__info">
+                                    <i class="icon icon-check-bold"></i>
+                                    <div class="properties__text">Швидкість вітру не більше ніж 15 м/с</div>
+                                </div>
+                                <div class="properties__info">
+                                    <i class="icon icon-check-bold"></i>
+                                    <div class="properties__text">Вологість повітря не більше ніж 70%</div>
+                                </div>
                             </div>
                             <div class="exploitation__btn">
                                 <a href="#feedback__form" class="contact__btn">Отримати консультацію</a>
@@ -285,11 +322,100 @@
             </section>
             <section class="battery">
                 <div class="container">
-                    
+                    <div class="battery__wrap">
+                        <div class="battery__left">
+                            <div class="content__text">До дрону рекомендуємо купувати акумулятори <span>6S2P Molicel INR-21700 P42A</span> (8400mAh 90A)</div>
+                            <div class="cards__text">Вони зможуть повність відкрити весь потенціал та можливості цього дрону.</div>
+                        </div>
+                        <div class="battery__right">
+                            <img src="images/battery.png" alt="dron" class="battery__img" width="400" height="296">
+                        </div>
+                    </div>
                 </div>
             </section>
 
-                {# <section class="banner">
+            <section class="video">
+                <div class="container">
+                    <div class="video__wrap">
+                        <div class="main__title">Запуск Fpv Leon 2</div>
+                        <div class="frame_blc">
+                            <iframe width="820" height="460" src="https://www.youtube.com/embed/AjVRJazAjZU?si=SXbbIijxFZxlK33v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="partners" id="partners">
+                <div class="container">
+                    <div class="main__title">Нам довіряють</div>
+                    <div class="partners__wrap">
+                        <div class="partners__item col1">
+                            <i class="icon icon-quote"></i>
+                            <div class="partners__text">Дуже задоволений покупкою! Товар виявився якісним і надійним. Швидка доставка і чудове обслуговування з боку магазину. Рекомендую всім, хто шукає якісні товари за доступною ціною. Обов'язково звернуся ще раз!</div>
+                            <div class="partners__contact">
+                                <div class="partners__info">
+                                    <div class="cards__text partners__name">Олександр Золочевський</div>
+                                    <div class="cards__text partners__position">UX/Ui дизайнер</div>
+                                </div>
+                                <div class="partners__logo">
+                                    <img src="images/partners/shield.png" alt="logo" class="logo__img" width="112" height="68">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners__content col2">
+                            <img src="images/partners/24-brig.png" alt="logo" class="logo__img" width="150" height="92">
+                            <div class="partners__text">24-та окрема механізована бригада імені короля Данила</div>
+                        </div>
+                        <div class="partners__content col3">
+                            <img src="images/partners/125-brig.png" alt="logo" class="logo__img" width="150" height="92">
+                            <div class="partners__text">125-та окрема бригада територіальної оборони Збройних сил України (125 ОБр ТрО)</div>
+                        </div>
+                        <div class="partners__content col4">
+                            <div><img src="images/partners/77-brig.png" alt="logo" class="logo__img" width="150" height="92"></div>
+                            <div class="partners__text">77-ма окрема аеромобільна бригада</div>
+                        </div>
+                        <div class="partners__content col5">
+                            <img src="images/partners/dshv.png" alt="logo" class="logo__img" width="150" height="92">
+                            <div class="partners__text">Десантно-штурмові війска України</div>
+                        </div>
+                        <div class="partners__content col6">
+                            <img src="images/partners/46-brig.png" alt="logo" class="logo__img" width="150" height="92">
+                            <div class="partners__text">46-та окрема аеромобільна бригада</div>
+                        </div>
+                        <div class="partners__content col7">
+                            <img src="images/partners/roj.png" alt="logo" class="logo__img" width="150" height="92">
+                            <div class="partners__text">Аеропідрозділ ʼʼРІЙʼʼ</div>
+                        </div>
+                        <div class="partners__item col8">
+                            <i class="icon icon-quote"></i>
+                            <div class="partners__text">Дуже задоволений покупкою! Товар виявився якісним і надійним. Швидка доставка і чудове обслуговування з боку магазину. Рекомендую всім, хто шукає якісні товари за доступною ціною. Обов'язково звернуся ще раз!</div>
+                            <div class="partners__contact">
+                                <div class="partners__info">
+                                    <div class="cards__text partners__name">Олександр Золочевський</div>
+                                    <div class="cards__text partners__position">UX/Ui дизайнер</div>
+                                </div>
+                                <div class="partners__logo">
+                                    <img src="images/partners/33-bat.png" alt="logo" class="logo__img" width="112" height="68">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="photo">
+                <div class="container">
+                    <div class="photo__wrap">
+                        <div class="photo__left">
+                            <img src="images/dron5.png" alt="dron" class="photo__img" width="610" height="400">
+                        </div>
+                        <div class="photo__right">
+                            <img src="images/dron6.png" alt="dron" class="photo__img" width="610" height="400">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            {# <section class="banner">
                     <div class="container">
                     <img src="images/dron1.png" alt="#">
                     <div class="banner__main">
@@ -309,12 +435,12 @@
             <img src="images/footer-logo.svg" alt="#">
         </a>
                 </section>       #}
-                {# {% for image in productsImages %}
+            {# {% for image in productsImages %}
                     <div class="img">
                         <img src="{{ image.src }}" alt="">
                     </div>
                 {% endfor %} #}
-            
+
         </main>
         {% include 'components/footer.njk' %}
     </div>

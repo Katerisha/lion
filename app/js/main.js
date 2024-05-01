@@ -100,6 +100,20 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       });
 
+    var $hor = $("#horizontal");
+
+    $("body").css('padding-bottom', $hor[0].scrollWidth - $hor.outerWidth());
+
+    $(window).on('scroll', function () {
+    var top = $(document).scrollTop();
+    var lim = $hor.position().top - $hor[0].scrollLeft - ($(window).height() - $hor.outerHeight()) / 2;
+    var width = $hor[0].scrollWidth - $hor.outerWidth();
+    var delta = Math.min(Math.max(top - lim, 0), width);
+    
+    $hor[0].scrollLeft = delta;
+    $("body").css({'padding-top': delta, 'padding-bottom': width - delta});
+    });
+
     $(document).on('change click', '.text__input', function () {
         if ($(this).val().length) {
             $(this).siblings('.control__label').addClass('filled');
