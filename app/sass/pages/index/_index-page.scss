@@ -95,15 +95,7 @@
 .arrow__down {
   text-align: center;
   margin-bottom: 60px;
-  @include r(1140) {
-    display: none;
-  }
-  .icon {
-    font-size: 28px;
-    @include r(1140) {
-
-    }
-  }
+  @include r(1140) 
 }
 
 .arrow__text {
@@ -152,7 +144,7 @@
   // grid-gap: 20px;
   // grid-column-gap: 230px;
   // grid-row-gap: 40px;
-  padding-top: 206px;
+  padding-top: 318px;
     @include r(1140) {
       padding-top: 448px;
   }
@@ -868,11 +860,8 @@
 }
 
 .partners__info {
-  @include r(599) {
+  @include r(991) {
     margin-bottom: 12px;
-  }
-  @include r(479) {
-    width: 100%;
   }
 }
 
