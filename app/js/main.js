@@ -68,51 +68,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    let slider = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        speed: 1500,
-        spaceBetween: 20,
-        slidesPerView: 6,
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 12,
-            },
-            601: {
-                slidesPerView: 2,
-                spaceBetween: 12,
-            },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 12,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            992: {
-                slidesPerView: 2,
-            },
-        },
-        autoplay: {
-          delay: 25000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-      });
-
     var $hor = $("#horizontal");
-
+    
     $("body").css('padding-bottom', $hor[0].scrollWidth - $hor.outerWidth());
 
-    $(window).on('scroll', function () {
+  $(window).on('scroll', function () {
     var top = $(document).scrollTop();
     var lim = $hor.position().top - $hor[0].scrollLeft - ($(window).height() - $hor.outerHeight()) / 2;
     var width = $hor[0].scrollWidth - $hor.outerWidth();
     var delta = Math.min(Math.max(top - lim, 0), width);
-    
-    $hor[0].scrollLeft = delta;
-    $("body").css({'padding-top': delta, 'padding-bottom': width - delta});
+    // $hor[0].scrollLeft = delta;
+    $hor.css({'left': -delta});
+    $("body").css({
+      'padding-top': delta,
+      'padding-bottom': width - delta
     });
+  });
 
     $(document).on('change click', '.text__input', function () {
         if ($(this).val().length) {
@@ -403,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $(document).ready(function () {
-    $('[type="tel"]').inputmask({
-        mask: '+38 (999) 999 99 99'
-      });
+  $('[type="tel"]').inputmask({
+    mask: '+38 (999) 999 99 99'
+  });
 });

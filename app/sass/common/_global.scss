@@ -238,18 +238,39 @@ h6,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-  padding-top: 82px;
-  // height: 8500px;
-  @include r(1199) {
-    padding-top: 70px;
-  }
-  @include r(767) {
-    padding-top: 62px;
-  }
+  // padding-top: 82px;
+  background: #F12D2F;
+  // @include r(1199) {
+  //   padding-top: 70px;
+  // }
+  // @include r(767) {
+  //   padding-top: 62px;
+  // }
 }
 
 .main {
+  background: $dark-grey;
   flex: 1 0 auto;
+  margin-bottom: 628px;
+  border-radius: 0 0 80px 80px;
+  z-index: 2;
+  padding-top: 82px;
+  @include r(1199) {
+    padding-top: 70px;
+  }
+  @include r(1099) {
+    margin-bottom: 828px;
+  }
+  @include r(767) {
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 748px;
+  }
+  // @include r(600) {
+  //   padding-top: 60px;
+  // }
+  @include r(525) {
+    margin-bottom: 828px;
+  }
 }

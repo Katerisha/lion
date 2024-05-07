@@ -1,22 +1,26 @@
 .banner {
-  // position: relative;
   padding-top: 60px;
   padding-bottom: 134px;
-  // padding-bottom: 28px;
-  // &:before {
-  //   height: 50%;
-  //   background: $red;
-  //   position: absolute;
-  // }
-
   background-image: url(../images/dron1.png);
   background-repeat: no-repeat;
   background-position: 50% 120px;
-  background-size: 620px 523px;
-
+  background-size: 620px auto;
   position: relative;
   width: 100%;
   margin: 0 auto;
+  @include r(767) {
+    padding-bottom: 80px;
+  }
+  @include r(600) {
+    padding-top: 40px;
+    background-size: 305px auto;
+    background-position: 50% 138px;
+  }
+
+  @include r(360) {
+    background-size: 305px auto;
+    background-position: 50% 138px;
+  }
   &:before {
     position: absolute;
     background: $red;
@@ -34,6 +38,10 @@
     margin: 0 auto;
     @include r(767) {
       border-radius: 40px;
+      // top: 330px;
+    }
+    @include r(600) {
+      top: 290px;
     }
   }
 }
@@ -62,7 +70,6 @@
   position: relative;
   z-index: -1;
   @include r(1140) {
-    // font-size: 150px;
     margin-bottom: 0;
   }
   @include r(1024) {
@@ -95,7 +102,15 @@
 .arrow__down {
   text-align: center;
   margin-bottom: 60px;
-  @include r(1140) 
+  @include r(1140) {
+    display: none;
+  }
+  .icon {
+    font-size: 28px;
+    @include r(1140) {
+
+    }
+  }
 }
 
 .arrow__text {
@@ -134,24 +149,29 @@
 //   grid-gap: 20px;
 // }
 
-.banner__bottom.grids {
+.banner__bottom {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  // display: grid;
-  // grid-template-columns: repeat(12, 1fr);
-  // grid-template-columns: repeat(auto-fit, minmax(505px, 1fr));
-  // grid-gap: 20px;
-  // grid-column-gap: 230px;
-  // grid-row-gap: 40px;
-  padding-top: 318px;
+  padding-top: 206px;
     @include r(1140) {
       padding-top: 448px;
   }
-  @include r(1099) {
+  @include r(600) {
+    padding-top: 325px;
+  }
+}
+
+.banner__bottom .grids {
+    display: grid;
+  // grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(505px, 1fr));
+    grid-gap: 20px;
+  // grid-column-gap: 230px;
+  // grid-row-gap: 40px;
+    @include r(1099) {
     grid-row-gap: 40px;
     grid-template-columns: auto;
-
   }
 }
 
@@ -228,10 +248,17 @@
 .cards__slider {
   padding-top: 119px;
   padding-bottom: 140px;
+  overflow: hidden;
   @include r(1024) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  .main__title {
+    margin-bottom: 64px;
+    @include r(767) {
+      margin-bottom: 20px;
+    }
+}
 }
 
 .main__title {
@@ -246,46 +273,44 @@
   }
 }
 
-.cards__slider .main__title {
-  margin-bottom: 64px;
+.slider__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.card__wrapper {
+  border-radius: 20px;
+  max-width: 295px;
+  width: 100%;
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: $grey;
   @include r(767) {
-    margin-bottom: 20px;
+    min-height: 455px;
   }
 }
 
-
-.slider {
-  display: flex;
-  justify-content: center;
-  // @include r(1024) {
-  //   margin-bottom: 140px;
-  // }
-  // @include r(767) {
-  //   margin-bottom: 100px;
-  // }
-  // @include r(601) {
-  //   margin-bottom: 80px;
-  // }
-}
-
-.mySwiper {
-  // display: flex;
-  // flex-wrap: wrap;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  // grid-gap: 20px;
-  .swiper-slide {
-    border-radius: 20px;
-    max-width: 295px;
-    min-height: 520px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background: $grey;
-    @include r(767) {
-      max-width: 237px;
-      min-height: 455px;
-    }
+.card__wrapper {
+  min-width: calc(25% - 15px);
+  margin-left: 20px;
+  @include r(1023) {
+    min-width: calc(44% - 15px);
+  }
+  @include r(767) {
+    margin-left: 12px; 
+    min-width: calc(44% - 15px);
+  }
+  @include r(600) {
+    min-width: calc(50% - 15px);
+  }
+  @include r(479) {
+    min-width: calc(79% - 15px);
+  }
+  &:first-child {
+    margin-left: 0;
   }
 }
 
@@ -337,6 +362,9 @@
   border-radius: 10px;
   margin-bottom: 20px;
   width: 100%;
+  @include r(767) {
+    border-radius: 6px;
+  }
 }
 
 .cards__text {
@@ -354,21 +382,16 @@
     @include r(1023) {
       padding-bottom: 60px;
     }
-    @include r(991) {
-      padding-bottom: 60px;
-    }
   }
 }
 
 .specifications__wrap {
   flex-wrap: wrap;
-  // display: flex;
   display: grid;
   grid-template-columns: minmax(0, 295px) minmax(0, 715px);
   grid-column-gap: 60px;
   justify-content: space-between;
   align-items: flex-start;
-  // gap: 60px;
   @include r(991) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-row-gap: 60px;
@@ -379,36 +402,13 @@
   margin-bottom: 20px;
   width: 100%;
   z-index: 1;
+  position: relative;
 }
 
 .specifications__left {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 20px 28px;
-  max-width: 295px;
-  border-radius: 20px;
-  background: $grey;
-  position: relative;
+  height: 100%;
   @include r(991) {
     order: 1;
-    margin: 0 auto;
-    max-width: 320px;
-  }
-  // @include r(767) {
-  //   max-width: 320px;
-  // }
-  &::before {
-    position: absolute;
-    background-color: $red;
-    width: 100%;
-    height: 170px;
-    left: 0;
-    right: 0;
-    top: 0;
-    border-radius: 20px 20px 0 0;
-    display: block;
-    content: "";
-    z-index: 1;
   }
   .cards__subtitle {
     @include fsb;
@@ -436,12 +436,38 @@
   }
 }
 
+.sticky__block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px 28px;
+  max-width: 295px;
+  border-radius: 20px;
+  background: $grey;
+  position: sticky;
+  top: 100px;
+  @include r(991) {
+    order: 1;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  &:before {
+    position: absolute;
+    background-color: #F12D2F;
+    width: 100%;
+    height: 170px;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    content: "";
+    z-index: 1;
+  }
+}
+
 .specifications__item {
-  // display: flex;
   border-radius: 8px;
   padding: 12px 16px;
-  // justify-content: space-between;
-  // gap: 15px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 130px);
   grid-column-gap: 15px;
@@ -455,7 +481,6 @@
   }
   .name {
     color: $grey-txt;
-    // text-align: left;
   }
   .meaning {
     @include fsb;
@@ -757,7 +782,6 @@
     background: $white;
     border-radius: 10px;
   }
-
 }
 
 .col1 {
@@ -860,8 +884,11 @@
 }
 
 .partners__info {
-  @include r(991) {
+  @include r(599) {
     margin-bottom: 12px;
+  }
+  @include r(479) {
+    width: 100%;
   }
 }
 

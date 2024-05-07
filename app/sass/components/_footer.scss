@@ -2,8 +2,11 @@
   padding-top: 140px;
   padding-bottom: 80px;
   width: 100%;
-  background: $red;
+  // background: $red;
   margin: 0 auto;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
   @include r(1099) {
     padding-top: 60px;
     padding-bottom: 48px;
